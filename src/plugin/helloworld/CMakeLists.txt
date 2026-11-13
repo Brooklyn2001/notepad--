@@ -19,6 +19,10 @@ file(GLOB MOC_HEADER ${PROJECT_SOURCE_DIR}/*.h)
 
 add_library(${PROJECT_NAME} SHARED ${SRC} ${UI_SRC} ${MOC_HEADER})
 
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/plugin"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/plugin")
+
 target_include_directories(${PROJECT_NAME} PRIVATE
 ${PROJECT_SOURCE_DIR}
 

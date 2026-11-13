@@ -481,6 +481,7 @@
      </property>
      <addaction name="actionChinese"/>
      <addaction name="actionEnglish"/>
+     <addaction name="actionRussian"/>
     </widget>
     <addaction name="actionOptions"/>
     <addaction name="menuLanguage_2"/>
@@ -1591,6 +1592,14 @@
    </property>
    <property name="text">
     <string>Chinese</string>
+   </property>
+  </action>
+  <action name="actionRussian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Russian</string>
    </property>
   </action>
   <action name="actionLanguage_Format">
@@ -2720,6 +2729,22 @@
    <signal>triggered()</signal>
    <receiver>CCNotePad</receiver>
    <slot>slot_changeChinese()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>601</x>
+     <y>394</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRussian</sender>
+   <signal>triggered()</signal>
+   <receiver>CCNotePad</receiver>
+   <slot>slot_changeRussian()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>

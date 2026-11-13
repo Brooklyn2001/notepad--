@@ -1,0 +1,588 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,1,1,13
+ PRODUCTVERSION 3,1,1,13
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040004b0"
+        BEGIN
+            VALUE "FileDescription", "XMLTools"
+            VALUE "FileVersion", "3.1.1.13"
+            VALUE "InternalName", "XMLTools"
+            VALUE "LegalCopyright", "Copyright (C) 2005-2022"
+            VALUE "OriginalFilename", "XMLTools.dll"
+            VALUE "ProductName", "XMLTools"
+            VALUE "ProductVersion", "3.1.1.13"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x400, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_NEXT                BITMAP                  "res\\Next.bmp"
+
+IDB_PREV                BITMAP                  "res\\Previous.bmp"
+
+IDB_CHECKXML            BITMAP                  "res\\CheckXml.bmp"
+
+IDB_VALIDATEXML         BITMAP                  "res\\ValidateXml.bmp"
+
+IDB_COMMENT             BITMAP                  "res\\Comment.bmp"
+
+IDB_CURRENTXPATH        BITMAP                  "res\\CurrentXPath.bmp"
+
+IDB_CURRENTXPATHNS      BITMAP                  "res\\CurrentXPathNS.bmp"
+
+IDB_ESCAPE              BITMAP                  "res\\EscapeXml.bmp"
+
+IDB_EVALUATEXPATH       BITMAP                  "res\\EvaluateXPath.bmp"
+
+IDB_LINEARIZE           BITMAP                  "res\\Linearize.bmp"
+
+IDB_OPTIONS             BITMAP                  "res\\Options.bmp"
+
+IDB_PRETTYPRINT         BITMAP                  "res\\PrettyPrint.bmp"
+
+IDB_PRETTYPRINTINDENTATTR BITMAP                  "res\\PrettyPrintAttr.bmp"
+
+IDB_PRETTYPRINTINDENTONLY BITMAP                  "res\\PrettyPrintIndentOnly.bmp"
+
+IDB_UNCOMMENT           BITMAP                  "res\\Uncomment.bmp"
+
+IDB_UNESCAPE            BITMAP                  "res\\UnescapeXml.bmp"
+
+IDB_XSLTRANSFORM        BITMAP                  "res\\XslTransform.bmp"
+
+IDB_FIRST               BITMAP                  "res\\First.bmp"
+
+IDB_LAST                BITMAP                  "res\\Last.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CHECKXML            ICON                    "res\\CheckXml.ico"
+
+IDI_CHECKXML_DM         ICON                    "res\\CheckXml_DM.ico"
+
+IDI_COMMENT             ICON                    "res\\Comment.ico"
+
+IDI_COMMENT_DM          ICON                    "res\\Comment_DM.ico"
+
+IDI_CURRENTXPATH        ICON                    "res\\CurrentXPath.ico"
+
+IDI_CURRENTXPATH_DM     ICON                    "res\\CurrentXPath_DM.ico"
+
+IDI_CURRENTXPATHNS      ICON                    "res\\CurrentXPathNS.ico"
+
+IDI_CURRENTXPATHNS_DM   ICON                    "res\\CurrentXPathNS_DM.ico"
+
+IDI_ESCAPE              ICON                    "res\\EscapeXml.ico"
+
+IDI_ESCAPE_DM           ICON                    "res\\EscapeXml_DM.ico"
+
+IDI_EVALUATEXPATH       ICON                    "res\\EvaluateXPath.ico"
+
+IDI_EVALUATEXPATH_DM    ICON                    "res\\EvaluateXPath_DM.ico"
+
+IDI_FIRST               ICON                    "res\\First.ico"
+
+IDI_FIRST_DM            ICON                    "res\\First_DM.ico"
+
+IDI_LAST                ICON                    "res\\Last.ico"
+
+IDI_LAST_DM             ICON                    "res\\Last_DM.ico"
+
+IDI_LINEARIZE           ICON                    "res\\Linearize.ico"
+
+IDI_LINEARIZE_DM        ICON                    "res\\Linearize_DM.ico"
+
+IDI_NEXT                ICON                    "res\\Next.ico"
+
+IDI_NEXT_DM             ICON                    "res\\Next_DM.ico"
+
+IDI_OPTIONS             ICON                    "res\\Options.ico"
+
+IDI_OPTIONS_DM          ICON                    "res\\Options_DM.ico"
+
+IDI_PRETTYPRINT         ICON                    "res\\PrettyPrint.ico"
+
+IDI_PRETTYPRINT_DM      ICON                    "res\\PrettyPrint_DM.ico"
+
+IDI_PRETTYPRINTINDENTATTR ICON                    "res\\PrettyPrintAttr.ico"
+
+IDI_PRETTYPRINTINDENTATTR_DM ICON                    "res\\PrettyPrintAttr_DM.ico"
+
+IDI_PRETTYPRINTINDENTONLY ICON                    "res\\PrettyPrintIndentOnly.ico"
+
+IDI_PRETTYPRINTINDENTONLY_DM ICON                    "res\\PrettyPrintIndentOnly_DM.ico"
+
+IDI_PREV                ICON                    "res\\Previous.ico"
+
+IDI_PREV_DM             ICON                    "res\\Previous_DM.ico"
+
+IDI_UNCOMMENT           ICON                    "res\\Uncomment.ico"
+
+IDI_UNCOMMENT_DM        ICON                    "res\\Uncomment_DM.ico"
+
+IDI_UNESCAPE            ICON                    "res\\UnescapeXml.ico"
+
+IDI_UNESCAPE_DM         ICON                    "res\\UnescapeXml_DM.ico"
+
+IDI_VALIDATEXML         ICON                    "res\\ValidateXml.ico"
+
+IDI_VALIDATEXML_DM      ICON                    "res\\ValidateXml_DM.ico"
+
+IDI_XSLTRANSFORM        ICON                    "res\\XslTransform.ico"
+
+IDI_XSLTRANSFORM_DM     ICON                    "res\\XslTransform_DM.ico"
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (Switzerland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRS)
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH_SWISS
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 12, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\XMLTools.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.fra\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_INPUTDLG DIALOG 0, 0, 294, 66
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "<TITLE>"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_INPUT,7,23,280,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,237,45,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,183,45,50,14
+    LTEXT           "<CAPTION>",IDC_STATIC_CAPTION,7,7,280,11
+END
+
+IDD_XPATHEVAL DIALOGEX 0, 0, 402, 221
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "XPath Expression Evaluation"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_EXPRESSION,86,7,308,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Evaluate",IDC_BTN_EVALUATE,344,45,50,13
+    CONTROL         "List1",IDC_LIST_XPATHRESULTS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,129,387,85
+    PUSHBUTTON      "Copy",IDC_BTN_COPY2CLIPBOARD,230,45,50,13
+    PUSHBUTTON      "Clear",IDC_BTN_CLEARLIST,288,45,50,13
+    EDITTEXT        IDC_EDIT_NAMESPACE,86,25,308,12,ES_AUTOHSCROLL
+    LTEXT           "XPath expression",IDC_STATIC_XPATH,7,7,54,8
+    LTEXT           "Namespace definition",IDC_STATIC_NS,7,29,67,8
+    LTEXT           "",IDC_STATIC_INFOS,86,68,308,33
+END
+
+IDD_SELECTFILE DIALOGEX 0, 0, 379, 156
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select file..."
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_FILENAME,7,19,341,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BTN_EXPLORE_XSDFILE,352,19,20,12
+    EDITTEXT        IDC_EDIT_ROOTELEMSAMPLE,7,101,365,30,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,322,135,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,269,135,50,14
+    LTEXT           "Please select XML schema (XSD):",IDC_STATIC,7,7,224,8
+    LTEXT           "Important:",IDC_STATIC,7,63,84,8
+    LTEXT           "This dialog box is displayed because default validation schema cannot be found in XML root element. To avoid having to specify the XSD for every validation, please define the default XML schema in your root element using following syntax:",IDC_STATIC,7,74,365,25
+    EDITTEXT        IDC_EDIT_NAMESPACE,7,45,365,12,ES_AUTOHSCROLL
+    LTEXT           "Namespace URI:",IDC_STATIC,7,35,56,8
+END
+
+IDD_MESSAGEDLG DIALOGEX 0, 0, 356, 146
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Information"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,299,125,50,14
+    EDITTEXT        IDC_EDIT_MULTILINEMSG,7,7,342,115,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_XSLTDLG DIALOGEX 0, 0, 292, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "XSL Transformation settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_XSLTFILE,7,7,255,12,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BTN_BROWSEXSLTFILE,266,7,19,12
+    LTEXT           "Options:",IDC_STATIC,7,52,278,8
+    EDITTEXT        IDC_EDIT_XSLTOPTIONS,7,61,278,31,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+    DEFPUSHBUTTON   "Transform",IDC_BTN_TRANSFORM,231,98,54,14
+    LTEXT           "You can enter up to 16 options using following syntax:",IDC_STATIC,7,94,223,8
+    LTEXT           "param1=123 param2='abc' param3=concat('abc','123')",IDC_STATIC,7,103,219,9
+    LTEXT           "Select either XSL or XML. If active document is XML then select the XSL Stylesheet to use for transformation; if active document is XSL then select XML you want to transform using active XSL.",IDC_STATIC,7,20,278,25
+END
+
+IDD_HOWTOUSE DIALOGEX 0, 0, 181, 112
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "XML Tools"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,65,91,50,14
+    CTEXT           "Unable to load libXML and/or libXSLT.",IDC_STATIC,7,7,167,10
+    CTEXT           "Please install external DLLs into NPP root directory (same directory as Notepad++.exe) or into ""%appdata%\\Notepad++"" folder and restart NPP.",IDC_STATIC,7,25,167,42
+    CTEXT           "These libraries are available in the subfolder ""ext_libs"" of the xmltools zip archive.",IDC_STATIC,7,62,167,29
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 193, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "XML Tools"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,136,30,50,19
+    CTEXT           "IDC_ABOUTTEXT",IDC_ABOUTTEXT,7,7,124,40
+    PUSHBUTTON      "Donate",IDC_BUTTON1,136,7,50,19
+    LTEXT           "Home page:",IDC_STATIC,7,53,40,8
+    CONTROL         "<a>SysLink1</a>",IDC_LNKHOMEPAGE,"SysLink",WS_TABSTOP,54,53,132,8
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 403, 395
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,293,374,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,346,374,50,14
+    PUSHBUTTON      "Annotation preview",IDC_BTNVIEWANNOTATION,7,374,85,14
+    CONTROL         "",IDC_PROPERTIES,"MfcPropertyGrid",0x100,7,7,389,362
+END
+
+IDD_DLGDEBUG DIALOGEX 0, 0, 389, 239
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Debug"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDITDEBUG,7,7,375,185,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Clear",IDC_BTNCLEAR,7,218,50,14
+    PUSHBUTTON      "Close",IDC_BTNCLOSE,332,218,50,14
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 555, 253
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,199,232,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,498,232,50,14
+    GROUPBOX        "Proxy",IDC_STATIC,0,7,294,92
+    CONTROL         "Enable proxy (experimental)",IDC_CHKENABLEPROXY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,19,107,10
+    LTEXT           "Proxy host",IDC_STATIC,19,34,36,8
+    EDITTEXT        IDC_EDITPROXYHOST,93,32,191,12,ES_AUTOHSCROLL
+    LTEXT           "Proxy port",IDC_STATIC,19,50,35,8
+    EDITTEXT        IDC_EDITPROXYPORT,93,48,191,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITPROXYUSERNAME,93,64,191,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Proxy user name",IDC_STATIC,19,66,55,8
+    LTEXT           "Proxy user password",IDC_STATIC,19,82,68,8
+    EDITTEXT        IDC_EDITPROXYPASSWORD,93,80,191,12,ES_PASSWORD | ES_AUTOHSCROLL | WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_INPUTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_XPATHEVAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 394
+        VERTGUIDE, 86
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+        HORZGUIDE, 37
+    END
+
+    IDD_SELECTFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 372
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_MESSAGEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 349
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_XSLTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_HOWTOUSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        VERTGUIDE, 90
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 105
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        VERTGUIDE, 54
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+        HORZGUIDE, 67
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 396
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 388
+    END
+
+    IDD_DLGDEBUG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 382
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 548
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 246
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_MESSAGEDLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OPTIONS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_XPATHEVAL AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 0, 0,
+    100, 0, 0, 0,
+    0, 0, 0, 0,
+    100, 0, 0, 0,
+    100, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 100, 0
+END
+
+IDD_SELECTFILE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_XSLTDLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DLGDEBUG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS DLGINIT
+BEGIN
+    IDC_PROPERTIES, 0x37c, 414, 0
+0x4d3c, 0x4346, 0x7250, 0x706f, 0x7265, 0x7974, 0x7247, 0x6469, 0x485f, 
+0x6165, 0x6564, 0x4372, 0x7274, 0x3e6c, 0x5254, 0x4555, 0x2f3c, 0x464d, 
+0x5043, 0x6f72, 0x6570, 0x7472, 0x4779, 0x6972, 0x5f64, 0x6548, 0x6461, 
+0x7265, 0x7443, 0x6c72, 0x3c3e, 0x464d, 0x5043, 0x6f72, 0x6570, 0x7472, 
+0x4779, 0x6972, 0x5f64, 0x6544, 0x6373, 0x6972, 0x7470, 0x6f69, 0x416e, 
+0x6572, 0x3e61, 0x5254, 0x4555, 0x2f3c, 0x464d, 0x5043, 0x6f72, 0x6570, 
+0x7472, 0x4779, 0x6972, 0x5f64, 0x6544, 0x6373, 0x6972, 0x7470, 0x6f69, 
+0x416e, 0x6572, 0x3e61, 0x4d3c, 0x4346, 0x7250, 0x706f, 0x7265, 0x7974, 
+0x7247, 0x6469, 0x415f, 0x706c, 0x6168, 0x6562, 0x6974, 0x4d63, 0x646f, 
+0x3e65, 0x4146, 0x534c, 0x3c45, 0x4d2f, 0x4346, 0x7250, 0x706f, 0x7265, 
+0x7974, 0x7247, 0x6469, 0x415f, 0x706c, 0x6168, 0x6562, 0x6974, 0x4d63, 
+0x646f, 0x3e65, 0x4d3c, 0x4346, 0x7250, 0x706f, 0x7265, 0x7974, 0x7247, 
+0x6469, 0x4d5f, 0x646f, 0x6669, 0x6569, 0x5064, 0x6f72, 0x6570, 0x7472, 
+0x6569, 0x3e73, 0x4146, 0x534c, 0x3c45, 0x4d2f, 0x4346, 0x7250, 0x706f, 
+0x7265, 0x7974, 0x7247, 0x6469, 0x4d5f, 0x646f, 0x6669, 0x6569, 0x5064, 
+0x6f72, 0x6570, 0x7472, 0x6569, 0x3e73, 0x4d3c, 0x4346, 0x7250, 0x706f, 
+0x7265, 0x7974, 0x7247, 0x6469, 0x565f, 0x4453, 0x746f, 0x654e, 0x4c74, 
+0x6f6f, 0x3e6b, 0x5254, 0x4555, 0x2f3c, 0x464d, 0x5043, 0x6f72, 0x6570, 
+0x7472, 0x4779, 0x6972, 0x5f64, 0x5356, 0x6f44, 0x4e74, 0x7465, 0x6f4c, 
+0x6b6f, 0x3c3e, 0x464d, 0x5043, 0x6f72, 0x6570, 0x7472, 0x4779, 0x6972, 
+0x5f64, 0x6544, 0x6373, 0x6972, 0x7470, 0x6f69, 0x526e, 0x776f, 0x3e73, 
+0x3031, 0x2f3c, 0x464d, 0x5043, 0x6f72, 0x6570, 0x7472, 0x4779, 0x6972, 
+0x5f64, 0x6544, 0x6373, 0x6972, 0x7470, 0x6f69, 0x526e, 0x776f, 0x3e73, 
+
+    0
+END
+
+#endif    // French (Switzerland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE 12, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\XMLTools.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.fra\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

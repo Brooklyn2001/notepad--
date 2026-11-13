@@ -475,3 +475,9 @@ compile_commands.json
 [Bb]uild/
 .vscode/
 .vs/
+
+# Файлы LLM
+.mimocode/
+AGENTS.md
+rules.md
+memory.md

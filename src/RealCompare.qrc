@@ -32,6 +32,8 @@
         <file>Resources/img/pre.png</file>
         <file>Resources/edit/styledeepblue/rename.png</file>
         <file>realcompare_zh.qm</file>
+        <file>realcompare_ru.qm</file>
+        <file>qscint/src/qscintilla_ru.qm</file>
         <file>Resources/edit/styleblack/rename.png</file>
         <file>Resources/img/bin.png</file>
         <file>Resources/img/info.png</file>

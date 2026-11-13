@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 16,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "windows-x64",
+      "displayName": "Windows x64 (Qt 5.15.14 MSVC 2022)",
+      "description": "Configure for x64 with MSVC (Visual Studio 17 2022) and Qt 5.15.14",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "C:/dev/QT/Qt5.15.14-Windows-x86_64-VS2022-17.10.3/lib/cmake",
+        "CMAKE_BUILD_TYPE": "Release",
+        "PLUGIN_EN": "off"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "windows-x64",
+      "configurePreset": "windows-x64",
+      "configuration": "Release"
+    }
+  ]
+}

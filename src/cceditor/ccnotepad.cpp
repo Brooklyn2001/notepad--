@@ -1,4 +1,4 @@
-﻿#include <memory>
+#include <memory>
 #include "ccnotepad.h"
 #include "filemanager.h"
 #include "Encode.h"
@@ -1111,6 +1111,7 @@ CCNotePad::CCNotePad(bool isMainWindows, QWidget *parent)
 	NddSetting::init();
 
 	m_translator = new QTranslator(this);
+	m_qscintTranslator = new QTranslator(this);
 
 		m_curSoftLangs = NddSetting::getKeyValueFromNumSets(LANGS_KEY);
 
@@ -1123,6 +1124,10 @@ CCNotePad::CCNotePad(bool isMainWindows, QWidget *parent)
 		{
 			slot_changeChinese();
 		}
+		else if (local.language() == QLocale::Russian)
+		{
+			slot_changeRussian();
+		}
 			break;
 	}
 		case 1:
@@ -1130,6 +1135,9 @@ CCNotePad::CCNotePad(bool isMainWindows, QWidget *parent)
 			break;
 		case 2:
 			slot_changeEnglish();
+			break;
+		case 3:
+			slot_changeRussian();
 			break;
 		default:
 			break;
@@ -2187,6 +2195,7 @@ void CCNotePad::destroyAllPluginModule()
 
 void CCNotePad::slot_changeChinese()
 {
+	qApp->removeTranslator(m_qscintTranslator);
 	if (m_translator->load(":/realcompare_zh.qm"))
 	{
 		qApp->installTranslator(m_translator);
@@ -2226,6 +2235,7 @@ void CCNotePad::adjustWInPos(QWidget* pWin)
 
 void CCNotePad::slot_changeEnglish()
 {
+	qApp->removeTranslator(m_qscintTranslator);
 	m_translator->load("");
 	qApp->installTranslator(m_translator);
 	ui.retranslateUi(this);
@@ -2247,6 +2257,40 @@ void CCNotePad::slot_changeEnglish()
 		m_isToolMenuLoaded = false;
 		slot_dynamicLoadToolMenu();
 }
+}
+
+void CCNotePad::slot_changeRussian()
+{
+	//перевод QScintilla (команды/контекстное меню редактора)
+	if (m_qscintTranslator->load(":/qscintilla_ru.qm"))
+	{
+		qApp->installTranslator(m_qscintTranslator);
+	}
+
+	if (m_translator->load(":/realcompare_ru.qm"))
+	{
+		qApp->installTranslator(m_translator);
+		ui.retranslateUi(this);
+
+		if (m_curSoftLangs != 3)
+		{
+			m_curSoftLangs = 3;
+			NddSetting::updataKeyValueFromNumSets(LANGS_KEY, m_curSoftLangs);
+		}
+
+		//如果已经加载了，则冲加载，否则语言切换不生效
+		if (m_isToolMenuLoaded)
+		{
+#ifdef NO_PLUGIN
+			destroyAllPluginModule();
+			ui.menuPlugin->clear();
+			ui.menuPlugin->addAction(ui.actionPlugin_Manager);
+#endif
+			ui.menuTools->clear();
+			m_isToolMenuLoaded = false;
+			slot_dynamicLoadToolMenu();
+		}
+	}
 }
 #if 0
 void CCNotePad::saveDefFont()

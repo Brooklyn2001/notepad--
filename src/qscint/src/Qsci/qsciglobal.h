@@ -1,4 +1,4 @@
-﻿// This module defines various things common to all of the Scintilla Qt port.
+// This module defines various things common to all of the Scintilla Qt port.
 //
 // Copyright (c) 2023 Riverbank Computing Limited <info@riverbankcomputing.com>
 // 
@@ -41,7 +41,7 @@
 #undef QSCINTILLA_DLL
 #endif
 
-#define QSCINTILLA_DLL 
+//#define QSCINTILLA_DLL
 
 #if defined(QSCINTILLA_DLL)
 #define QSCINTILLA_EXPORT       Q_DECL_IMPORT

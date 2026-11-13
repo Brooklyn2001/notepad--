@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <QMainWindow>
 #include <QLabel>
@@ -166,6 +166,7 @@ signals:
 public slots:
 	void slot_changeChinese();
 	void slot_changeEnglish();
+	void slot_changeRussian();
 
 	void slot_actionNewFile_toggle(bool checked);
 	void slot_actionOpenFile_toggle(bool checked);
@@ -581,6 +582,7 @@ private:
 
 
 	QTranslator* m_translator;
+	QTranslator* m_qscintTranslator;
 	QTimer * m_timerAutoSave;
 
 	QToolButton* m_newFile;
