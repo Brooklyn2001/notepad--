@@ -1,78 +1,67 @@
-# notepad--
+# Notepad--
 
-[中文 ](README.md) | [English](README_EN.md)
+[English](README.md) | [中文 ](README_CN.md) | [Русский](README_RU.md)
 
-## 项目简介
+## Project Introduction
 
-Notepad-- 是使用C++编写的轻量级文本编辑器, 简称ndd, 可以支持Window/Mac/Linux操作系统平台。
+Introducing Notepad-- a text editor written in C++ that works seamlessly across Windows, Linux, and Mac platforms. Our goal is to eventually surpass Notepad++, with a special focus on the Chinese UOS operating system. Unlike Notepad++, our advantage lies in our cross-platform compatibility and support for different operating system.
 
-我们的目标：完成文本编辑类软件的国产可替代，重点在国产Uos/Linux系统、Mac 系统上发展。
+**The purpose of Notepad-- is to counteract some of the misleading statements made by the author of Notepad++ and to promote a more humble and grounded perspective.** 
 
-对比其它竞品Notepad类软件而言，我们的优势是可以跨平台，支持linux mac操作系统。
+If you come across any bugs or have any feedback, feel free to let us know.
 
- **鉴于某些Notepad竞品作者的不当言论，Notepad--的意义在于：减少一点错误言论，减少一点自以为是。** 
+You can download the latest version from https://gitee.com/cxasm/notepad--/releases/tag/v2.0.
 
- **Notepad--的目标：致力于国产软件的可替代，专心做软件。**
+We have recently added the ability to write plugins to Notepad-- and we hope that many CPP/QT developers will join us in this endeavour. If you develop a plugin, you can include your name and a donation channel.
 
-您可以在这个项目提交bug或反馈问题。
+Creating a free text editor requires support from users like you. If you'd like to contribute, please consider donating via WeChat.
 
-最新版本下载地址：https://gitee.com/cxasm/notepad--/releases/latest
+![Input description picture](6688.png)
 
-众筹捐赠支持本项目的热心用户，也请留言处留下邮箱，会发送正版激活码，后续也可以发邮件给作者索要激活码。
+## Compilation
 
- **购买小额注册码** 
+**CMake Toolchain Compilation Instructions:**
 
-条件允许的用户，还请通过购买小额注册码支持开发者，支持国产正版ndd软件。感谢正版用户支持，您的支持是我一直维护下去的动力！
+- Ubuntu/Debian
 
-电脑端支付宝购买 请点击：[https://pay.ldxp.cn/shop/ZSYEBF1I](https://pay.ldxp.cn/shop/ZSYEBF1I)
+1. Install compilation environment `sudo apt-get install g++ make cmake`
+1. Install qt tools and libraries `sudo apt-get install qtbase5-dev qt5-qmake qtbase5-dev-tools libqt5printsupport5 libqt5xmlpatterns5-dev `
+1. Configure `cmake -B build -DCMAKE_BUILD_TYPE=Release`
+1. Compile `cd build && make -j`
+1. Package `cpack`
 
+- ArchLinux
 
-## 联络方式
+1. Install compilation environment `sudo pacman -S gcc cmake make ninja`
+1. Install qt tools and libraries `sudo pacman -S qt5-tools qt5-base qt5-xmlpatterns `
+1. Configure `cmake -S . -Bbuild -GNinja -DCMAKE_BUILD_TYPE=Release  -DCMAKE_INSTALL_PREFIX=/usr -W no-dev`
+1. Compile `ninja -C build && ninja -C build install`
+1. Package: use [AUR/notepad---git](https://aur.archlinux.org/packages/notepad---git) `yay -S notepad---git`
+1. Installation:
+    - Pre-compiled package add [ArchLinuxCN/notepad---git](https://github.com/archlinuxcn/repo) mirror `yay -S archlinuxcn/notepad---git`
+    - Pre-compiled package [Debuginfod/notepad---git-debug](https://wiki.archlinux.org/title/Debuginfod) package `yay -S archlinuxcn/notepad---git-debug`
 
-QQ群：1007890239 注册版用户群，做NDD的问题反馈、功能建议等。
+**Qt Project Compilation Instructions:** 
 
-由于群人数有限，无法加群的用户，请关注微信公众号或抖音账号，给我留言或提交bug或需求。微信公众号二维码如下：
+1) Start by opening qscint/src/qscintilla.pro in either Qt Creator or Visual Studio and compile the qscintilla dependency library.
 
-![输入图片说明](png/qrcode_for_gh_e64d7035b02d_258.jpg)
+2) Next, open RealCompare.pro and compile it after loading.
 
+3) Due to the multi-platform compilation, involving Windows/Linux/MacOS, if there are any compilations or problems, please join qq group 959439826. We welcome contributions and code submissions from everyone.
 
-## 编译或使用手册
-见build目录下文档 linux开源编译及下载说明.txt
-见本仓库文档 Ndd使用说明.CHM
+Recently, the code was made available online. However, the commercial comparison function and registration function have been removed for commercial reasons. All other functions have been retained.
 
-## 效果预览
+4) For Arch Linux and its derivatives, you can install Notepad-- through the AUR using the following command: [notepad---git](https://aur.archlinux.org/packages/notepad---git)
+```
+yay -S notepad---git
+```
 
- **windows效果图：** 
+## Preview
 
-![输入图片说明](png/0828.png)
+![Input description picture](png/20221107_160824.png)
 
-![输入图片说明](png/20240105.png)
+![Input description picture](png/6.png)
 
+![Input description picture](png/3.png)
 
-![文件对比](png/6.png)
-
- **MacOS 效果图：** 
-
-![输入图片说明](png/010501.png)
-
-
-![输入图片说明](png/010502.png)
-
-![输入图片说明](010503.png)
-
-
- **Redhat7.x 效果图：** 
-
-![输入图片说明](png/010505.png)
-
- **UOS 深度 效果图：** 
-
-![输入图片说明](png/0809.png)
-
- **银河麒麟 开源openkylin amd x64 效果图：** 
-
-![输入图片说明](png/kinly01.png)
-
-![输入图片说明](png/kinly02.png)
-
-![输入图片说明](png/kinly03.png)
+![Input description picture](png/7.png)
