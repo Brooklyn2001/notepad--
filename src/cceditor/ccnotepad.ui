@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CCNotePad</class>
+ <class>ccnotepad</class>
  <widget class="QMainWindow" name="CCNotePad">
   <property name="geometry">
    <rect>

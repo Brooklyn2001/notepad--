@@ -5,56 +5,57 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets PrintSupport)
+if(NOT DEFINED QT_VERSION_MAJOR)
+    set(QT_VERSION_MAJOR 5 CACHE STRING "Major version of Qt to use (5 or 6)")
+endif()
+
+if(QT_VERSION_MAJOR EQUAL 6)
+    if(NOT TARGET Qt6::Core)
+        find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets PrintSupport Concurrent Network Core5Compat)
+    endif()
+    set(QSCINT_QT_LIBS Qt6::Core Qt6::Gui Qt6::Widgets Qt6::PrintSupport Qt6::Concurrent Qt6::Network Qt6::Core5Compat)
+    set(QSCINT_SUFFIX "qt6")
+    set(QSCINT_MIN_STD cxx_std_17)
+else()
+    if(NOT TARGET Qt5::Core)
+        find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets PrintSupport Concurrent Network)
+    endif()
+    set(QSCINT_QT_LIBS Qt5::Core Qt5::Gui Qt5::Widgets Qt5::PrintSupport Qt5::Concurrent Qt5::Network)
+    set(QSCINT_SUFFIX "qt5")
+    set(QSCINT_MIN_STD cxx_std_11)
+endif()
 
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC)
 aux_source_directory(${PROJECT_SOURCE_DIR}/scintilla/lexers SRC)
 aux_source_directory(${PROJECT_SOURCE_DIR}/scintilla/lexlib SRC)
 aux_source_directory(${PROJECT_SOURCE_DIR}/scintilla/src SRC)
 aux_source_directory(${PROJECT_SOURCE_DIR}/scintilla/boostregex SRC)
-
 file(GLOB MOC_HEADER ${PROJECT_SOURCE_DIR}/src/Qsci/*.h)
-
-#message(${MOC_HEADER})
 
 add_library(${PROJECT_NAME} STATIC ${SRC} ${MOC_HEADER})
 
-# add_definitions(-DQSCINTILLA_MAKE_DLL)
-# add_library(${PROJECT_NAME} SHARED ${SRC} ${MOC_HEADER})
-
 target_compile_definitions(${PROJECT_NAME} PRIVATE SCINTILLA_QT SCI_LEXER INCLUDE_DEPRECATED_FEATURES)
+target_compile_features(${PROJECT_NAME} PRIVATE ${QSCINT_MIN_STD})
+
+# Подавляем C4828 (BOM/спецсимволы в заголовках QScintilla)
+if(MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE /wd4828)
+endif()
 
 target_include_directories(${PROJECT_NAME} PRIVATE
-${PROJECT_SOURCE_DIR}/scintilla/lexlib
-${PROJECT_SOURCE_DIR}/scintilla/boostregex
-)
+    ${PROJECT_SOURCE_DIR}/scintilla/lexlib
+    ${PROJECT_SOURCE_DIR}/scintilla/boostregex)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
-${PROJECT_SOURCE_DIR}/src
-${PROJECT_SOURCE_DIR}/src/Qsci
-${PROJECT_SOURCE_DIR}/scintilla/src
-${PROJECT_SOURCE_DIR}/scintilla/include)
+    ${PROJECT_SOURCE_DIR}/src
+    ${PROJECT_SOURCE_DIR}/src/Qsci
+    ${PROJECT_SOURCE_DIR}/scintilla/src
+    ${PROJECT_SOURCE_DIR}/scintilla/include)
 
-target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Concurrent Qt5::Network Qt5::PrintSupport)
+target_link_libraries(${PROJECT_NAME} ${QSCINT_QT_LIBS})
 
-# 多配置生成器(Visual Studio/MSBuild)下 CMAKE_BUILD_TYPE 为空, 上面的 if 总会走 else
-# 导致 Release 也生成 qmyedit_qt5d, 与 main.cpp 中 #pragma comment(lib) 的 _DEBUG 分支冲突。
-# 改用按配置的输出名, 保证:
-#   Debug/RelWithDebInfo -> qmyedit_qt5d (MSVC 定义 _DEBUG)
-#   Release/MinSizeRel   -> qmyedit_qt5
 set_target_properties(${PROJECT_NAME} PROPERTIES
-    OUTPUT_NAME_DEBUG "qmyedit_qt5d"
-    OUTPUT_NAME_RELWITHDEBINFO "qmyedit_qt5d"
-    OUTPUT_NAME_RELEASE "qmyedit_qt5"
-    OUTPUT_NAME_MINSIZEREL "qmyedit_qt5"
-)
-
-
-
-# if(NOT DEFINED ${notepad--_BINARY_DIR})
-# set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${notepad--_BINARY_DIR}/bin/plugin)
-# set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${notepad--_BINARY_DIR}/bin/plugin)
-# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${notepad--_BINARY_DIR}/bin/plugin)
-# set(LIBRARY_OUTPUT_PATH ${notepad--_BINARY_DIR}/bin/plugin)
-# set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${notepad--_BINARY_DIR}/bin/plugin)
-# endif()
+    OUTPUT_NAME_DEBUG          "qmyedit_${QSCINT_SUFFIX}d"
+    OUTPUT_NAME_RELWITHDEBINFO "qmyedit_${QSCINT_SUFFIX}d"
+    OUTPUT_NAME_RELEASE        "qmyedit_${QSCINT_SUFFIX}"
+    OUTPUT_NAME_MINSIZEREL     "qmyedit_${QSCINT_SUFFIX}")

@@ -8,23 +8,59 @@
   "configurePresets": [
     {
       "name": "windows-x64",
-      "displayName": "Windows x64 (Qt 5.15.14 MSVC 2022)",
-      "description": "Configure for x64 with MSVC (Visual Studio 17 2022) and Qt 5.15.14",
+      "displayName": "Windows x64 (Qt 5 MSVC 2022)",
+      "description": "Configure for x64 with MSVC (Visual Studio 17 2022) and Qt 5",
       "generator": "Visual Studio 17 2022",
       "architecture": "x64",
       "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
-        "CMAKE_PREFIX_PATH": "C:/dev/QT/Qt5.15.14-Windows-x86_64-VS2022-17.10.3/lib/cmake",
         "CMAKE_BUILD_TYPE": "Release",
-        "PLUGIN_EN": "off"
+        "PLUGIN_EN": "OFF",
+        "QT_VERSION_MAJOR": "5"
+      }
+    },
+    {
+      "name": "windows-x64-qt6",
+      "displayName": "Windows x64 (Qt 6 MSVC 2022)",
+      "description": "Configure for x64 with MSVC (Visual Studio 17 2022) and Qt 6",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build-qt6",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "PLUGIN_EN": "OFF",
+        "QT_VERSION_MAJOR": "6"
+      }
+    },
+    {
+      "name": "linux-x64",
+      "displayName": "Linux x64 (Qt 5 + Ninja)",
+      "description": "Configure for x64 on Linux using Ninja and Qt 5",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "PLUGIN_EN": "OFF",
+        "QT_VERSION_MAJOR": "5"
+      }
+    },
+    {
+      "name": "linux-x64-qt6",
+      "displayName": "Linux x64 (Qt 6 + Ninja)",
+      "description": "Configure for x64 on Linux using Ninja and Qt 6",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-qt6",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "PLUGIN_EN": "OFF",
+        "QT_VERSION_MAJOR": "6"
       }
     }
   ],
   "buildPresets": [
-    {
-      "name": "windows-x64",
-      "configurePreset": "windows-x64",
-      "configuration": "Release"
-    }
+    { "name": "windows-x64",      "configurePreset": "windows-x64",      "configuration": "Release" },
+    { "name": "windows-x64-qt6",  "configurePreset": "windows-x64-qt6",  "configuration": "Release" },
+    { "name": "linux-x64",        "configurePreset": "linux-x64",        "configuration": "Release" },
+    { "name": "linux-x64-qt6",    "configurePreset": "linux-x64-qt6",    "configuration": "Release" }
   ]
 }
