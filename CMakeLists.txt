@@ -50,14 +50,14 @@ endif()
 
 # --- Подкаталоги ---
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/qscint)
-add_subdirectory(${PROJECT_SOURCE_DIR}/src/plugin/helloworld)
+#add_subdirectory(${PROJECT_SOURCE_DIR}/src/plugin/helloworld)
 
 if(NOT PLUGIN_EN)
     set(NDD_SOURCE_DIR ${PROJECT_SOURCE_DIR})
-    add_subdirectory(${PROJECT_SOURCE_DIR}/ndd-jstool)
-    add_subdirectory(${PROJECT_SOURCE_DIR}/ndd-xmltool)
-    add_subdirectory(${PROJECT_SOURCE_DIR}/ndd-compareplus)
-    add_subdirectory(${PROJECT_SOURCE_DIR}/ndd-edi)
+    add_subdirectory(${PROJECT_SOURCE_DIR}/src/plugin/ndd-jstool)
+    add_subdirectory(${PROJECT_SOURCE_DIR}/src/plugin/ndd-xmltool)
+    add_subdirectory(${PROJECT_SOURCE_DIR}/src/plugin/ndd-compareplus)
+    add_subdirectory(${PROJECT_SOURCE_DIR}/src/plugin/ndd-edi)
 endif()
 
 if(PLUGIN_EN)
